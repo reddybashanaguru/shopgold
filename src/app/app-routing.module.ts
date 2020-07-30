@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () =>
       import("./home-tab/home-tab.module").then((m) => m.HomeTabPageModule),
   },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then( m => m.AuthPageModule)
+  },
 ];
 @NgModule({
   imports: [
