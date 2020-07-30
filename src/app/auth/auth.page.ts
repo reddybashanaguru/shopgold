@@ -8,11 +8,11 @@ import { Router } from "@angular/router";
   styleUrls: ["./auth.page.scss"],
 })
 export class AuthPage implements OnInit {
-  constructor(private _authService: AuthService, private router: Router) {}
+  constructor(private _authService: AuthService, private _router: Router) {}
 
   ngOnInit() {}
   onLogin() {
     this._authService.login();
-    this.router.navigateByUrl("/home");
+    this._router.navigateByUrl("/home");
   }
 }

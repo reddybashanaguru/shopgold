@@ -10,7 +10,9 @@ export class AuthService {
     return this._userIsAuthenticated;
   }
 
-  constructor() {}
+  constructor() {
+    console.log(this._userIsAuthenticated);
+  }
 
   login() {
     this._userIsAuthenticated = true;

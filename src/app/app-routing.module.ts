@@ -1,11 +1,13 @@
 import { NgModule } from "@angular/core";
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
+import { AuthGuard } from "./auth/auth.guard";
 
 const routes: Routes = [
   {
-    path: "",
+    path: "home",
     loadChildren: () =>
       import("./dashboard/dashboard.module").then((m) => m.TabsPageModule),
+    canLoad: [AuthGuard],
   },
   {
     path: "home-tab",
@@ -13,8 +15,14 @@ const routes: Routes = [
       import("./home-tab/home-tab.module").then((m) => m.HomeTabPageModule),
   },
   {
-    path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then( m => m.AuthPageModule)
+    path: "auth",
+    loadChildren: () =>
+      import("./auth/auth.module").then((m) => m.AuthPageModule),
+  },
+  {
+    path: "",
+    redirectTo: "/home",
+    pathMatch: "full",
   },
 ];
 @NgModule({
