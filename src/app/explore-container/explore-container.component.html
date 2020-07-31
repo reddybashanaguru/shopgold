@@ -1,4 +1,24 @@
-<div id="container">
+<!-- <div id="container">
   <strong>{{ name }}</strong>
   <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+</div> -->
+<div id="container">
+  <ion-row>
+    <ion-col size-sm="8" offset-sm="2">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Rings</ion-card-subtitle>
+          <ion-card-title>{{ product.title }}</ion-card-title>
+        </ion-card-header>
+        <div class="image-container">
+          <ion-img [src]="url" slot="start"></ion-img>
+        </div>
+        <ion-card-content>
+          Keep close to Nature's heart... and break clear away, once in awhile,
+          and climb a mountain or spend a week in the woods. Wash your spirit
+          clean.
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
 </div>

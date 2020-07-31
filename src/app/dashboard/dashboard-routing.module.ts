@@ -9,7 +9,7 @@ const routes: Routes = [
     component: DashboardPage,
     children: [
       {
-        path: "search",
+        path: "home",
         loadChildren: () =>
           import("../tab1/tab1.module").then((m) => m.Tab1PageModule),
       },
@@ -23,16 +23,16 @@ const routes: Routes = [
         loadChildren: () =>
           import("../tab3/tab3.module").then((m) => m.Tab3PageModule),
       },
-      // {
-      //   path: "home",
-      //   redirectTo: "/home/search",
-      //   pathMatch: "full",
-      // },
+      {
+        path: "",
+        redirectTo: "/db/home",
+        pathMatch: "full",
+      },
     ],
   },
   // {
-  //   path: "home",
-  //   redirectTo: "/home/search",
+  //   path: "",
+  //   redirectTo: "/db/home",
   //   pathMatch: "full",
   // },
 ];

@@ -4,15 +4,10 @@ import { AuthGuard } from "./auth/auth.guard";
 
 const routes: Routes = [
   {
-    path: "home",
+    path: "db",
     loadChildren: () =>
       import("./dashboard/dashboard.module").then((m) => m.TabsPageModule),
     canLoad: [AuthGuard],
-  },
-  {
-    path: "home-tab",
-    loadChildren: () =>
-      import("./home-tab/home-tab.module").then((m) => m.HomeTabPageModule),
   },
   {
     path: "auth",
@@ -21,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: "",
-    redirectTo: "/home",
+    redirectTo: "db",
     pathMatch: "full",
   },
 ];
