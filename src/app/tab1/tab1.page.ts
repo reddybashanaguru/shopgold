@@ -10,21 +10,28 @@ export class Tab1Page {
   public productList: Product[] = [
     new Product(
       "p1",
-      "Delhi Mansion",
-      "In the heart of India",
-      "https://images-na.ssl-images-amazon.com/images/I/61a6xwJfETL._UL1500_.jpg",
-      2000
+      "Gold Chain",
+      "Lorem Ipsum is simply dummy text",
+      "https://cfcdn19.candere.com/media/catalog/product/cache/1/image/1020x1020/9df78eab33525d08d6e5fb8d27136e95/k/m/kmuch502-0a.jpg?v=1548066614",
+      14900
     ),
     new Product(
       "p2",
-      "Hyderabad Mansion",
+      "Gold Ring Yellow",
       "In the heart of Telangana",
-      "https://m.economictimes.com/thumb/msid-71771669,width-1200,height-900,resizemode-4,imgsize-257346/hyderabad-getty.jpg",
-      20000
+      "https://charujewelsonline.com/wp-content/uploads/2019/10/CJLR2353-Y1.jpg",
+      259900
+    ),
+    new Product(
+      "p2",
+      "Gold Biscuit",
+      "In the heart of Telangana",
+      "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2020/07/30/916398-gold-file.jpg",
+      345900
     ),
   ];
   constructor() {
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 10000; i++) {
       this.productList = [...this.productList, this.productList[0]];
       i++;
     }

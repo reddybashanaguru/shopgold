@@ -1,10 +1,10 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>{{ isLogin ? 'Login' : 'Signup' }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding auth-page">
   <form #f="ngForm" (ngSubmit)="onSubmit(f)">
     <ion-grid>
       <ion-row>
@@ -25,9 +25,9 @@
               *ngIf="!emailCtrl.valid && emailCtrl.touched"
               lines="none"
             >
-              <ion-label>
+              <ion-text color="danger">
                 Should be a valid email address.
-              </ion-label>
+              </ion-text>
             </ion-item>
             <ion-item>
               <ion-label position="floating">Password</ion-label>
@@ -44,9 +44,9 @@
               *ngIf="!passwordCtrl.valid && passwordCtrl.touched"
               lines="none"
             >
-              <ion-label>
+              <ion-text color="danger">
                 Should at least be 6 characters long.
-              </ion-label>
+              </ion-text>
             </ion-item>
           </ion-list>
         </ion-col>

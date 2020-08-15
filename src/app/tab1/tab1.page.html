@@ -20,35 +20,22 @@
               <ion-img [src]="place.imageUrl"></ion-img>
             </ion-thumbnail>
             <ion-label>
-              <h2>{{place.title}}</h2>
-              <p><ion-label color="danger">{{place.description}}</ion-label></p>
-            </ion-label>
-          </ion-item>
-        </ion-virtual-scroll>
-      </ion-col>
-    </ion-row>
-    <!-- <ion-row class="product-list">
-      <ion-col size="12" size-sm="8" offset-sm="2" class="ion-text-center">
-        <ion-virtual-scroll [items]="productList" approxItemHeight="70px">
-          <ion-item
-            *virtualItem="let product"
-            [routerLink]="[product.id]"
-            detail
-          >
-            <ion-thumbnail slot="start">
-              <ion-img [src]="product.imageUrl"></ion-img>
-            </ion-thumbnail>
-            <ion-label>
-              <h2>{{product.id}} - {{product.title}}</h2>
-              <p>
-                <ion-label class="product-desc"
-                  >{{product.description}}</ion-label
-                >
+              <span color="dark">{{place.title}}</span>
+              <ion-badge slot="end" color="danger" class="ion-float-end"
+                >Rs. {{place.price}}/-</ion-badge
+              >
+              <!-- <p>
+                <ion-text color="warning">Price: </ion-text>
+                <ion-badge>Rs. {{place.price}}/-</ion-badge>
+              </p> -->
+              <p class="ion-text-wrap">
+                <ion-text color="warning">Description: </ion-text>
+                <ion-text color="success">{{place.description}}</ion-text>
               </p>
             </ion-label>
           </ion-item>
         </ion-virtual-scroll>
       </ion-col>
-    </ion-row> -->
+    </ion-row>
   </ion-grid>
 </ion-content>
